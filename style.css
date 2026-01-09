@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #0E0E0E;
+  color: #DAC5A7;
+}
+
+.main {
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+.hero img {
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 100;
+  text-align: center;
+}
+.hero p {
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+  opacity: 0.7;
+  margin: 0.9rem 0;
+}
+.hero p br {
+  display: none;
+}
+.hero .myservices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.hero .myservices img {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.hero .myservices .icon-wrapper {
+  background-color: #181716;
+  border: 1px solid #2D2A26;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  transition: all 0.3s linear;
+}
+.hero .myservices .icon-wrapper:hover {
+  background-color: #23211E;
+  border-color: #473A33;
+  cursor: pointer;
+}
+.hero .myservices p {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.marquee-slider {
+  width: 100%;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.marquee-slider .marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.marquee-slider .marquee::after {
+  content: "";
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #0E0E0E, transparent);
+}
+.marquee-slider .marquee::before {
+  content: "";
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to left, #0E0E0E, transparent);
+  z-index: 2;
+}
+.marquee-slider .marquee .text {
+  display: flex;
+  gap: 3rem;
+  padding: 0 1.5rem;
+  animation: marquee 10s linear infinite both;
+}
+.marquee-slider .marquee p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.Services {
+  width: 100%;
+}
+.Services .Services-conatiner {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.Services .Services-conatiner .card {
+  border: 1px solid #343230;
+  padding: 2rem;
+  height: -moz-min-content;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #181716;
+}
+.Services .Services-conatiner .service-Number {
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+.Services .Services-conatiner .Service-Name {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 100;
+  opacity: 0.8;
+}
+.Services .Services-conatiner .Service-description {
+  font-size: 0.9rem;
+  font-weight: lighter;
+  line-height: 1.6rem;
+  opacity: 0.8;
+}
+.Services .Services-conatiner .detailed-description {
+  margin-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.8;
+}
+.Services .Services-conatiner .detailed-description img {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.Services .Services-conatiner .detailed-description .icon-wrapper {
+  background-color: #181716;
+  border: 1px solid #2D2A26;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s linear;
+}
+.Services .Services-conatiner .detailed-description .icon-wrapper:hover {
+  background-color: #23211E;
+  border-color: #473A33;
+  cursor: pointer;
+}
+.Services .Services-conatiner .detailed-description .About-Services {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.Selected-Works {
+  width: 100%;
+}
+.Selected-Works .SelectedWork-Header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  gap: 1rem;
+}
+.Selected-Works .SelectedWork-Header .header-wrapper h1 {
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 1.2px;
+}
+.Selected-Works .SelectedWork-Header .seeall-btn-txt {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.Selected-Works .SelectedWork-Header img {
+  height: 1rem;
+  width: 1rem;
+}
+.Selected-Works .SelectedWork-Header .icon-wrapper {
+  background-color: #181716;
+  border: 1px solid #2D2A26;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s linear;
+}
+.Selected-Works .SelectedWork-Header .icon-wrapper:hover {
+  background-color: #23211E;
+  border-color: #473A33;
+  cursor: pointer;
+}
+.Selected-Works .SelectedWork-Header .seeall-txt {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1.2px;
+}
+.Selected-Works .SelectedWork-Main {
+  width: 100%;
+  height: 100%;
+  padding: 0 1.5rem;
+}
+.Selected-Works .SelectedWork-imageContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.Selected-Works .box1, .Selected-Works .box2, .Selected-Works .box3, .Selected-Works .box4 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.Selected-Works .Space-Work, .Selected-Works .Nova-Work, .Selected-Works .Sonic-Work, .Selected-Works .Solar-Work {
+  position: relative;
+}
+.Selected-Works img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block; /* Removes any extra space below the image */
+}
+.Selected-Works .selectedWork-data {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%); /* Center the element horizontally */
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%; /* Adjust width as needed */
+  background-color: rgba(218, 197, 167, 0.05); /* Dark semi-transparent background */
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px); /* Blur effect behind the element */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border */
+  border-radius: 2px;
+  /* Remove left: 0 to allow centering */
+}
+.Selected-Works .data-name {
+  font-size: 1rem;
+  color: #DAC5A7;
+  font-weight: 100;
+}
+.Selected-Works .data-component {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #DAC5A7;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+
+@media (min-width: 1020px) {
+  html {
+    font-size: clamp(16px, 1vw, 20px);
+  }
+  .hero img {
+    width: 35%;
+  }
+  .hero h1 {
+    font-size: 6.5rem;
+  }
+  .hero p {
+    font-size: 1.3rem;
+  }
+  .hero p br {
+    display: block;
+  }
+  .marquee-slider .marquee {
+    width: 60%;
+  }
+  .Services {
+    width: 100%;
+  }
+  .Services .Services-conatiner {
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    height: 40%;
+  }
+  .Services .Services-conatiner .card {
+    border: 1px solid #343230;
+    padding: 2.5rem;
+    height: -moz-min-content;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #181716;
+  }
+  .Services .Services-conatiner .service-Number {
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+  .Services .Services-conatiner .Service-Name {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 100;
+  }
+  .Services .Services-conatiner .Service-description {
+    font-size: 1rem;
+    font-weight: lighter;
+    line-height: 1.6rem;
+  }
+  .Services .Services-conatiner .detailed-description {
+    margin-top: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .Services .Services-conatiner .detailed-description img {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  .Services .Services-conatiner .detailed-description .icon-wrapper {
+    background-color: #343230;
+    border: 1px solid #2D2A26;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s linear;
+  }
+  .Services .Services-conatiner .detailed-description .icon-wrapper:hover {
+    background-color: #23211E;
+    border-color: #473A33;
+    cursor: pointer;
+  }
+  .Services .Services-conatiner .detailed-description .About-Services {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+  .Selected-Works {
+    width: 100%;
+  }
+  .Selected-Works .SelectedWork-Header {
+    flex-direction: row;
+    padding: 2rem 5rem;
+  }
+  .Selected-Works .SelectedWork-Header img {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  .Selected-Works .SelectedWork-Header .seeall-txt {
+    font-size: 0.75rem;
+  }
+  .Selected-Works .SelectedWork-Main {
+    padding: 0 2.5rem;
+  }
+  .Selected-Works .SelectedWork-imageContainer {
+    flex-direction: row;
+  }
+  .Selected-Works .box1, .Selected-Works .box2, .Selected-Works .box3, .Selected-Works .box4 {
+    width: 49%;
+  }
+  .Selected-Works .data-name {
+    font-size: 1.125rem;
+  }
+  .Selected-Works .data-component {
+    font-size: 0.75rem;
+    font-weight: 100;
+  }
+}/*# sourceMappingURL=style.css.map */
